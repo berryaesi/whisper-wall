@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Wall - Confessions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <custom-navbar current-page="wall"></custom-navbar>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center text-pink-500 mb-8">Dearest Gentle Readers</h1>
+<div id="confessionsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Confessions will be loaded here -->
+        </div>
+    </main>
+
+    <footer class="bg-white py-6 border-t border-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 mb-2">A safe space for you and me</p>
+            <p class="text-gray-500 text-sm">About: A website where you can write anything and everything. Write something to take off your chest.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

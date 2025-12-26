@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Wall - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <custom-navbar current-page="home"></custom-navbar>
+    <main class="flex-grow container mx-auto px-4 py-8 flex flex-col items-center">
+        <div class="w-full max-w-2xl bg-white rounded-lg shadow-md p-6 mb-8">
+            <h1 class="text-3xl font-bold text-center text-pink-500 mb-6">Share Your Secret</h1>
+<p class="text-gray-600 text-center mb-6">Write anything you want to get off your chest - completely anonymously</p>
+            <form id="confessionForm" class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="useNickname" class="rounded text-purple-600 focus:ring-purple-500">
+                    <label for="useNickname" class="text-gray-600">Post with nickname</label>
+                </div>
+                <div id="nicknameField" class="hidden">
+                    <input type="text" id="nicknameInput" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Choose a nickname (optional)" maxlength="20">
+                </div>
+                <div>
+                    <textarea id="confessionText" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" rows="6" placeholder="Type your confession here..." required></textarea>
+                </div>
+<button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-4 rounded-lg transition duration-200">
+Post Anonymously
+                </button>
+            </form>
+        </div>
+
+        <div id="successMessage" class="hidden fixed top-20 right-4 bg-pink-400 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300">
+<p>Your confession has been posted!</p>
+        </div>
+    </main>
+
+    <footer class="bg-white py-6 border-t border-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 mb-2">A safe space for you and me</p>
+            <p class="text-gray-500 text-sm">About: A website where you can write anything and everything. Write something to take off your chest.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
